@@ -1,0 +1,4 @@
+#!/bin/bash
+cd "/path/to/Email_to_YoutubeDL"
+source "/path/to/Email_to_YoutubeDL/venv/bin/activate"
+python "/path/to/Email_to_YoutubeDL/email_to_youtubedl.py"

@@ -1,0 +1,15 @@
+{
+  "email_address": "youtube-dl_to_plex@example.com",
+  "email_password": "password",
+  "imap_ssl_host": "imap.example.com",
+  "imap_ssl_port": 993,
+  "smtp_host": "mail.example.com",
+  "smtp_port": 587,
+  "allowed_senders": ["my_main_email@example.com"],
+  "youtube-dl_options": {
+    "outtmpl": "/path/to/download_dir/%(title)s.%(ext).s",
+    "addmetadata": "True",
+    "download_archive":  "/path/to/archive.txt"
+  },
+  "max_retries": 5
+}
