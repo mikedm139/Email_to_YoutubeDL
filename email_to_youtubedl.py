@@ -13,7 +13,7 @@ def LoadConfig():
 
 def ConfirmArchive(config):
   if not os.path.exists(config['youtube-dl_options']['download_archive']):
-    f = open(config['youtube-dl_options']['download_archive'], w+)
+    f = open(config['youtube-dl_options']['download_archive'], "w+")
     f.close()
   else:
     pass
