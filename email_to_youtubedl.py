@@ -29,9 +29,10 @@ def CheckMail():
         i=i+1
   
   for message in mailbox.fetch(Q(seen=False)):
-    sender = message.from_
-    if sender not in config['allowed_senders']:
-      continue
+    if config['allowed_senders']:
+      sender = message.from_
+      if sender not in config['allowed_senders']:
+        continue
     subject = message.subject
     body = message.text
     video_url = body.strip()
