@@ -10,9 +10,17 @@ def LoadConfig():
   with open(config_file, 'r') as f:
     config = json.load(f)
   return config
+
+def ConfirmArchive(config):
+  if not os.path.exists(config['youtube-dl_options']['download_archive']):
+    f = open(config['youtube-dl_options']['download_archive'], w+)
+    f.close()
+  else:
+    pass
   
 def CheckMail():
   config = LoadConfig()
+  ConfirmArchive(config)
   mailbox = MailBox(config['imap_ssl_host'], config['imap_ssl_port'])
   try:
     mailbox.login(config['email_address'], config['email_password'], initial_folder='Inbox')
